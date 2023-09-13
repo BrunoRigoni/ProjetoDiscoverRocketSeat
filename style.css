@@ -32,6 +32,7 @@ body {
   /*background: color image repeat position/siza*/
   background: var(--bg-url) no-repeat top center/cover;
   /*tudo pode ser escrito de forma comprimida (na mesma linha)*/
+  height: 100vh;
 }
 /* body* = seletor universal, vai aplicar para todos os elementos dentro do body*/
 body * {
@@ -168,4 +169,15 @@ footer {
   display: flex;
   justify-content: center;
   padding: 24px 0;
+}
+
+/*Media queries*/
+/*tudo que inicia com @ no CSS é chamado de at rule*/
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/Background.jpg);
+  }
+  .light {
+    --bg-url: url(./assets/Background-light.jpg);
+  }
 }
